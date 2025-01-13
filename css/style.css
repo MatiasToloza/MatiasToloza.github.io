@@ -80,24 +80,39 @@ body {
   padding-top: 77px; /* Ajusta este valor a la altura de tu navbar (25px padding + altura del contenido) */
   box-sizing: border-box;
 }
+/* Asegúrate de que las imágenes sean responsivas */
+img {
+    max-width: 100%;
+    height: auto;
+}
 
-/* Media query (opcional, pero recomendado) */
-@media (max-width: 767px) { /* Para pantallas pequeñas */
-  .header-content {
-      flex-direction: column;
-      align-items: center;
-  }
-  .logo-panafer {
-      align-items: center; /* Centra el logo en pantallas pequeñas */
-      margin-bottom: 10px;
-  }
-  .nav-panafer ul {
-      flex-direction: column; /* Navegación vertical en móvil */
-      align-items: center;
-  }
-  .nav-panafer li {
-      margin: 5px 0; /* Espaciado vertical en móvil */
-  }
+/* Estilos para pantallas pequeñas */
+@media (max-width: 600px) {
+    .header-content, .nav-panafer ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .nav-panafer ul {
+        padding: 0;
+    }
+
+    .nav-panafer li {
+        margin: 5px 0;
+    }
+
+    .nosotros2 {
+        flex-direction: column;
+    }
+
+    .nosotros-imagen, .nosotros-texto {
+        width: 100%;
+    }
+
+    .image-content {
+        text-align: center;
+    }
 }
 
 
