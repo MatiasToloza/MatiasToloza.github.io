@@ -11,15 +11,11 @@
   box-sizing: border-box; /* Incluye padding y border en el ancho */
 }
 
-.header-content {
-  display: flex;
-  flex-direction: row; /* Alinear horizontalmente por defecto */
-  justify-content: space-between; /* Espacio entre logo y nav */
-  align-items: center;
-  max-width: 960px;
-  margin: 0 auto;
+.header-content { display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  flex-wrap: wrap;
 }
-
 /* Estilos del logo */
 .logo-panafer {
   display: flex;
@@ -51,11 +47,8 @@
 
 /* Estilos de la navegación */
 .nav-panafer ul {
-  list-style: none;
-  padding: 0;
-  margin: 0; /* Elimina márgenes */
-  display: flex;
-}
+   display: flex; 
+  flex-direction: column; }
 
 .nav-panafer li {
   margin: 0 15px;
@@ -85,35 +78,15 @@ img {
     max-width: 100%;
     height: auto;
 }
-
-/* Estilos para pantallas pequeñas */
-@media (max-width: 600px) {
-    .header-content, .nav-panafer ul {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .nav-panafer ul {
-        padding: 0;
-    }
-
-    .nav-panafer li {
-        margin: 5px 0;
-    }
-
-    .nosotros2 {
-        flex-direction: column;
-    }
-
-    .nosotros-imagen, .nosotros-texto {
-        width: 100%;
-    }
-
-    .image-content {
-        text-align: center;
-    }
+@media (max-width: 768px) {
+  .nav-panafer ul {
+      flex-direction: column;
+  }
+  .header-content {
+      flex-direction: column;
+  }
 }
+
 
 
 /* ... (estilos del header) ... */
