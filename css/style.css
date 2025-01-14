@@ -121,6 +121,7 @@ body {
   width: 100%;
   height: auto;
   object-fit: contain; /* o object-fit: cover; si prefieres recorte */
+  margin-top: 100px
 }
 
 .image-content {
