@@ -1,47 +1,145 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Panafer</title>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panafer</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header class="header-panafer">
-        <div class="header-content">
-            <a href="#" class="logo-panafer">
-                <span class="logo-text">PANAFER</span>
-                <span class="logo-subtext">Panaderia y pasteleria</span>
-                <span class="logo-icon"></span>
-            </a>
-            <nav class="nav-panafer">
-                <ul>
-                    <li><a href="#">Inicio</a></li>
-                    <li><a href="#">Nosotross</a></li>
-                    <li><a href="#">Productos</a></li>
-                    <li><a href="#">Contactanos</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+  <header class="header-panafer">
+    <div class="header-content">
+      <a href="#" class="logo-panafer">
+        <span class="logo-text">PANAFER</span>
+        <span class="logo-subtext">Panaderia y pasteleria</span>
+        <span class="logo-icon"></span>
+      </a>
+      <nav class="nav-panafer">
+        <ul>
+          <li><a href="#">Inicio</a></li>
+          <li><a href="#">Nosotros</a></li>
+          <li><a href="#">Productos</a></li>
+          <li><a href="#">Contactanos</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-    <section class="image-container">
-        <img src="https://www.bakelschile.cl/wp-content/uploads/sites/25/2022/11/IMG_7694.jpg" alt="Pan de Pascua">
-        <div class="image-content">
-            <h2>Prepárate para una dulce Navidad</h2>
-            <p>Pan de pascua 850 gr y 500 gr sabores: tradicional, nueces almendras & nueces dulce de leche</p>
-        </div>
-    </section>
-    <section class="nosotros">
-        <div class="nosotros2">
-            <div class="nosotros-imagen"> 
-                <img src="https://static.vecteezy.com/system/resources/previews/008/389/093/non_2x/homemade-bread-on-a-traditional-craftsman-market-vertical-image-photo.jpg" alt="Imagen de nosotros">
+  <section class="image-container">
+    <img src="https://www.bakelschile.cl/wp-content/uploads/sites/25/2022/11/IMG_7694.jpg" alt="Pan de Pascua">
+    <div class="image-content">
+      <h2>Prepárate para una dulce Navidad</h2>
+      <p>Pan de pascua 850 gr y 500 gr sabores: tradicional, nueces almendras & nueces dulce de leche</p>
+    </div>
+  </section>
+
+  <section class="nosotros">
+    <div class="nosotros2">
+      <div class="nosotros-imagen">
+        <img src="https://static.vecteezy.com/system/resources/previews/008/389/093/non_2x/homemade-bread-on-a-traditional-craftsman-market-vertical-image-photo.jpg" alt="Imagen de nosotros">
+      </div>
+      <div class="nosotros-texto">
+        <h2>Nosotros</h2>
+        <p>[Nombre de la Panadería], horneamos sueños desde [Año de fundación]. Lo que comenzó como una pequeña panadería familiar, impulsada por la pasión de [Nombre del fundador/a] p[...]</p>
+      </div>
+    </div>
+    <!DOCTYPE html>
+    <html lang="es">
+    <head>
+        </head>
+    <body>
+        <section class="catalogotitulo">Catálogo</section>
+    
+        <nav>
+            <button class="categoria-btn active" data-categoria="pasteleria">Pastelería</button>
+            <button class="categoria-btn" data-categoria="masa2">Masa...</button>
+            <button class="categoria-btn" data-categoria="masadulce">Masa dulce</button>
+            <button class="categoria-btn" data-categoria="ppascua">Pan de pascua</button>
+            <button class="categoria-btn" data-categoria="galletas">Galletas</button>
+        </nav>
+    
+        <main>
+            <div class="catalogo-wrapper">
+                <div id="pasteleria" class="productos-container active">
+                    <div class="producto">
+                        <img src="https://cdn0.matrimonios.cl/vendor/0636/3_2/960/jpg/banner_8_170636-166086524726536.jpeg" alt="Torta 1">
+                        <h3>Torta de Chocolate</h3>
+                        <p>Deliciosa torta de chocolate con frosting de vainilla.</p>
+                    </div>
+                    <div class="producto">
+                        <img src="https://cdn0.matrimonios.cl/vendor/0636/3_2/960/jpg/banner_8_170636-166086524726536.jpeg" alt="Torta 2">
+                        <h3>Torta de Frutas</h3>
+                        <p>Refrescante torta con frutas de temporada.</p>
+                    </div>
+                </div>
+    
+                <div id="masa2" class="productos-container">
+                    <div class="producto">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8CQEDzQL2gQkLsNawDEoG9GydUlozwDoWKg&s" alt="Pan 1">
+                        <h3>Pan Integral</h3>
+                        <p>Pan integral recién horneado.</p>
+                    </div>
+                     <div class="producto">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8CQEDzQL2gQkLsNawDEoG9GydUlozwDoWKg&s" alt="Pan 2">
+                        <h3>Pan de Campo</h3>
+                        <p>Delicioso pan de campo con masa madre.</p>
+                    </div>
+                </div>
+    
+                <div id="masadulce" class="productos-container">
+                    <div class="producto">
+                        <img src="https://www.bakelschile.cl/wp-content/uploads/sites/25/2019/01/sweet-dough.jpg" alt="Rollo de Canela">
+                        <h3>Rollos de Canela</h3>
+                        <p>Esponjosos rollos de canela con glaseado.</p>
+                    </div>
+                     <div class="producto">
+                        <img src="https://www.bakelschile.cl/wp-content/uploads/sites/25/2019/01/sweet-dough.jpg" alt="Croissant">
+                        <h3>Croissant</h3>
+                        <p>Crujiente croissant recién horneado.</p>
+                    </div>
+                </div>
+    
+                <div id="ppascua" class="productos-container">
+                    <div class="producto">
+                        <img src="https://www.latercera.com/resizer/v2/UAMDWRJDH5F7XBGNHL4A6GT3MU.jpg?quality=80&smart=true&auth=5a7dfca7157c5699c0168d13224f1e421f8c4b6d1e2167d595ef3d791d449d3b&width=690&height=502" alt="Pan de Pascua Tradicional">
+                        <h3>Pan de Pascua Tradicional</h3>
+                        <p>Clásico pan de pascua con frutas confitadas.</p>
+                    </div>
+                </div>
+    
+                <div id="galletas" class="productos-container">
+                    <div class="producto">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRHyZd5uusYPUY-ABp8emBrQWlmItFPokvZw&s" alt="Galletas de Chocolate">
+                        <h3>Galletas de Chocolate</h3>
+                        <p>Deliciosas galletas con chispas de chocolate.</p>
+                    </div>
+                     <div class="producto">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRHyZd5uusYPUY-ABp8emBrQWlmItFPokvZw&s" alt="Galletas de Avena">
+                        <h3>Galletas de Avena</h3>
+                        <p>Saludables galletas de avena y pasas.</p>
+                    </div>
+
+                    <div class="producto">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRHyZd5uusYPUY-ABp8emBrQWlmItFPokvZw&s" alt="Galletas de Avena">
+                        <h3>Galletas de Avena</h3>
+                        <p>Saludables galletas de avena y pasas.</p>
+                    </div>
+
+                    <div class="producto">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRHyZd5uusYPUY-ABp8emBrQWlmItFPokvZw&s" alt="Galletas de Avena">
+                        <h3>Galletas de Avena</h3>
+                        <p>Saludables galletas de avena y pasas.</p>
+                    </div>
+
+                    <div class="producto">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRHyZd5uusYPUY-ABp8emBrQWlmItFPokvZw&s" alt="Galletas de Avena">
+                        <h3>Galletas de Avena</h3>
+                        <p>Saludables galletas de avena y pasas.</p>
+                    </div>  
+                </div>
             </div>
-            <div class="nosotros-texto"> 
-                <h2>Nosotros</h2>
-                <p>[Nombre de la Panadería], horneamos sueños desde [Año de fundación]. Lo que comenzó como una pequeña panadería familiar, impulsada por la pasión de [Nombre del fundador/a] p[...]
-            </div>
-        </div>
-    </section>
-</body>
-</html>
+        </main>
+    
+        <script src="js/script.js"></script>
+    </body>
+    </html>

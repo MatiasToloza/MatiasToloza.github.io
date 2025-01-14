@@ -1,132 +1,116 @@
-/* Estilos generales para el encabezado (ahora navbar) */
+/* style.css */
+
+/* Estilos generales */
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding-top: 77px;
+  box-sizing: border-box;
+}
+
+/* Estilos del encabezado (navbar) */
 .header-panafer {
-  position: fixed; /* Fija el navbar */
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  background-color: rgb(0, 0, 0);
+  background-color: black;
   color: white;
-  padding: 15px;
-  z-index: 100; /* Asegura que esté encima de otros elementos */
-  box-sizing: border-box; /* Incluye padding y border en el ancho */
+  padding: 20px; /* Ajustado el padding */
+  z-index: 100;
+  box-sizing: border-box;
 }
 
-.header-content { display: flex; 
-  justify-content: space-between; 
-  align-items: center; 
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
 }
-/* Estilos del logo */
+
 .logo-panafer {
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* Alinear a la izquierda en pantallas grandes */
+  align-items: flex-start;
   text-decoration: none;
   color: white;
 }
 
 .logo-icon {
   width: 150px;
-  height: 20px;
-  border-top: 2px solid white;
-  margin-bottom: 5px;
+  height: 2px;
+  background-color: white;
+  margin-bottom: 20px;
 }
 
 .logo-text {
   font-size: 2em;
   font-weight: bold;
   letter-spacing: 2px;
-  margin: 0; /* Elimina márgenes innecesarios */
+  margin-bottom: 0;
 }
 
 .logo-subtext {
   font-size: 0.8em;
   margin-top: 5px;
+  margin-bottom: 5px;
   letter-spacing: 1px;
 }
 
-/* Estilos de la navegación */
 .nav-panafer ul {
-   display: flex; 
-  flex-direction: column; }
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
 
 .nav-panafer li {
-  margin: 0 15px;
+  margin-left: 20px;
 }
 
 .nav-panafer a {
   text-decoration: none;
   color: white;
-  font-size: 0.9em;
-  padding: 5px 10px;
+  padding: 10px;
   transition: color 0.3s;
 }
 
 .nav-panafer a:hover {
   color: lightgray;
-}
 
-/* Ajuste para el contenido principal */
-body {
-  margin: 0;
-  padding: 0;
-  padding-top: 77px; /* Ajusta este valor a la altura de tu navbar (25px padding + altura del contenido) */
-  box-sizing: border-box;
 }
-/* Media Queries para responsive */
 @media (max-width: 768px) {
-    .nav-panafer ul {
-        flex-direction: column;
-    }
-    .header-content {
-        flex-direction: column;
-    }
-    .nosotros2 {
-        flex-direction: column; /* Apila imagen y texto */
-        align-items: center; /* Centra verticalmente */
-        text-align: center;
-    }
-    .nosotros-imagen {
-        margin: 0 0 20px 0;
-        max-width: 100%;
-    }
-    .nosotros-texto h2 {
-        text-align: center;
-    }
-    .image-content {
-        bottom: 20px;
-        left: 10px;
-        right: 10px;
-        font-size: 0.8em;
-        transform: translateX(0);
-    }
-    .image-content h2 {
-        font-size: 1.2em;
-    }
+  .nav-panafer a {
+    text-decoration: none;
+    color: white;
+    padding: 0px;
+    transition: color 0.3s;
+    margin-top: 10px;
+  }
 }
-
-/* ... (estilos del header) ... */
-
+/* Estilos para la sección de la imagen principal */
 .image-container {
   width: 100%;
-  position: relative; /* Para posicionar el contenido sobre la imagen */
-  overflow: hidden; /* Evita que la imagen se desborde */
+  position: relative;
+  overflow: hidden;
   display: flex;
-  justify-content: center; /* Centra horizontalmente */
-  align-items: center;    /* Centra verticalmente */
+  justify-content: center;
+  align-items: center;
+  margin-top: 77px;
 }
 
 .image-container img {
   display: block;
   width: 100%;
   height: auto;
-  object-fit: contain; /* o object-fit: cover; si prefieres recorte */
-  margin-top: 100px
+  object-fit: cover;
 }
 
 .image-content {
   position: absolute;
-  bottom: 40px;
+  bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
   color: white;
@@ -137,87 +121,201 @@ body {
   max-width: 90%;
 }
 
-/* Media Queries (opcional - para ajustar el contenido en diferentes tamaños de pantalla) */
-@media (max-width: 767px) {
-  .image-content {
-      bottom: 20px;
-      left: 10px;
-      right: 10px;
-      font-size: 0.8em;
-      transform: translateX(0);
-  }
-  .image-content h2 {
-      font-size: 1.2em;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 991px) {
-  .image-content {
-      font-size: 0.9em;
-  }
-}
-/* seccion nosotros*/
-
-
 /* Estilos para la sección "Nosotros" */
 .nosotros {
-    width: 80%;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #f8f8f8;
-    border-radius: 8px;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f8f8f8;
+  border-radius: 8px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .nosotros2 {
-    display: flex; /* Para alinear imagen y texto */
-    flex-wrap: wrap; /* Para responsive */
-    align-items: flex-start; /* Alinea al inicio verticalmente */
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
 }
 
 .nosotros-imagen {
-    flex: 1 1 30%; /* La imagen ocupa el 30% del espacio */
-    max-width: 300px; /* Ancho máximo de la imagen */
-    margin-right: 20px;
+  flex: 1 1 30%;
+  max-width: 300px;
+  margin-right: 20px;
 }
 
 .nosotros-imagen img {
-    width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 8px;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  object-fit: cover;
 }
 
 .nosotros-texto {
-    flex: 1 1 60%; /* El texto ocupa el 60% del espacio */
-    text-align: justify;
+  flex: 1 1 60%;
+  text-align: justify;
 }
 
 .nosotros-texto h2 {
-    font-size: 2em;
-    margin-bottom: 10px;
-    color: #333;
-    text-align: left;
+  font-size: 2em;
+  margin-bottom: 10px;
+  color: #333;
+  text-align: left;
 }
 
 .nosotros-texto p {
-    line-height: 1.6;
-    color: #666;
+  line-height: 1.6;
+  color: #666;
 }
 
-/* Media Queries para responsive */
+/* ... (Estilos generales, header, imagen principal, nosotros - SIN CAMBIOS) ... */
+
+/* Estilos del catálogo */
+.catalogo-wrapper {
+  max-width: 1200px; /* Ancho máximo del contenedor del catálogo */
+  margin: 0 auto; /* Centra el contenedor del catálogo horizontalmente */
+  padding: 20px;
+}
+
+.productos-container {
+  display: none; /* Oculto por defecto */
+  grid-gap: 20px;
+  padding: 20px;
+  justify-content: center; /* Centra horizontalmente el grid */
+}
+
+.productos-container.active {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columnas por defecto */
+}
+
+.producto {
+  border: 1px solid #ddd;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+  overflow: hidden;
+  max-width: 350px; /* Ancho máximo de CADA tarjeta de producto */
+  margin: 0 auto; /* Centra CADA tarjeta dentro de su celda del grid */
+}
+
+.producto:hover {
+  transform: scale(1.05);
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.15);
+  background-color: #f5f5f5;
+  cursor: pointer;
+}
+
+.producto img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  display: block;
+}
+
+.producto h3 {
+  font-size: 1.2em;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.producto p {
+  font-size: 0.9em;
+  color: #666;
+  line-height: 1.4;
+}
+
+/* Estilos para los botones de categoría */
+nav {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+nav button {
+  padding: 10px 20px;
+  margin: 5px;
+  cursor: pointer;
+  border: none;
+  background-color: #000;
+  color: white;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+nav button.active {
+  background-color: #555;
+}
+
+nav button:hover {
+  background-color: #333;
+}
+
+/* Título del catálogo */
+.catalogotitulo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+  margin-top: 50px; /* Ajustado el margin-top */
+  font-size: 2em;
+  color: #000;
+  text-align: center;
+}
+
+/* Media Queries (CORREGIDO) */
 @media (max-width: 768px) {
-    .nosotros2 {
-        flex-direction: column; /* Apila imagen y texto */
-        align-items: center; /* Centra verticalmente */
-        text-align: center;
-    }
-    .nosotros-imagen {
-        margin: 0 0 20px 0;
-        max-width: 100%;
-    }
-    .nosotros-texto h2{
-        text-align: center;
-    }
+  .productos-container {
+      grid-template-columns: repeat(1, 1fr); /* Una columna en móviles */
+  }
+  .catalogo-wrapper {
+      max-width: 90%; /* Ajuste para pantallas pequeñas */
+  }
+  .producto { /* Ajuste IMPORTANTE para móviles */
+      max-width: 95%; /* Ocupa casi todo el ancho disponible */
+      /*O max-width: 400px; si quieres un ancho fijo*/
+  }
+  .producto img {
+    width: 100%;
+    height: 80px;
+    object-fit: cover;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    display: block;
+  }
+  .producto h3 {
+    font-size: 15px;
+    margin-bottom: 5px;
+    color: #333;
+  }
+  .producto p {
+    font-size: 12px;
+    color: #666;
+    line-height: 1.4;
+  }
+  nav button {
+    padding: 5px;
+    margin: 8px;
+    color: white;
+    border-radius: 5px;
+    transition: 1s
+  }
+  
+  
+}
+
+@media (min-width: 769px) and (max-width: 1023px) {
+  .productos-container {
+      grid-template-columns: repeat(2, 1fr); /* Dos columnas en tablets */
+  }
+  .catalogo-wrapper {
+      max-width: 95%; /* Ajuste para tablets */
+  }
+  .producto {
+      max-width: 45%; /*Ocupa casi la mitad del ancho disponible*/
+  }
 }
