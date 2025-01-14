@@ -17,41 +17,36 @@ botonesCategoria.forEach(boton => {
         }
     });
 });
+// ... (código para el filtrado de categorías - SIN CAMBIOS)
 
-const express = require('express');
-const nodemailer = require('nodemailer');
-const app = express();
+const form = document.getElementById('mi-formulario');
 
-app.use(express.urlencoded({ extended: true })); // Para procesar datos del formulario
+form.addEventListener('submit', (event) => {
+    event.preventDefault();
 
-app.post('/enviar-email', (req, res) => {
-    const { nombre, email, mensaje } = req.body;
+    const nombre = document.getElementById('nombre').value;
+    const email = document.getElementById('email').value;
+    const mensaje = document.getElementById('mensaje').value;
 
-    // Configurar el transportador de correo (usando un servicio como Gmail, SendGrid, etc.)
-    const transporter = nodemailer.createTransport({
-        service: 'gmail',
-        auth: {
-            user: 'mensajespanafer@gmail.com',
-            pass: 'mensajespanafer03' // ¡Cuidado! No expongas tu contraseña directamente en el código.
+    fetch('http://localhost:3000/enviar-email', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ nombre, email, mensaje })
+    })
+    .then(response => {
+        if (!response.ok) {
+            return response.text().then(text => {throw new Error(`${response.status} ${response.statusText}: ${text}`)})
         }
-    });
-
-    const mailOptions = {
-        from: 'mensajespanafer@gmail.com',
-        to: 'matiastoloza7@gmail.com',
-        subject: 'Nuevo mensaje del formulario de contacto',
-        text: `Nombre: ${nombre}\nEmail: ${email}\nMensaje: ${mensaje}`
-    };
-
-    transporter.sendMail(mailOptions, (error, info) => {
-        if (error) {
-            console.log(error);
-            res.send('Error al enviar el mensaje.');
-        } else {
-            console.log('Email enviado: ' + info.response);
-            res.send('Mensaje enviado correctamente.');
-        }
+        return response.text();
+    })
+    .then(data => {
+        alert(data);
+        form.reset();
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        alert('Hubo un error al enviar el mensaje. Inténtalo de nuevo más tarde.');
     });
 });
-
-app.listen(3000, () => console.log('Servidor escuchando en el puerto 3000'));
