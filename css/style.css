@@ -73,21 +73,37 @@ body {
   padding-top: 77px; /* Ajusta este valor a la altura de tu navbar (25px padding + altura del contenido) */
   box-sizing: border-box;
 }
-/* Asegúrate de que las imágenes sean responsivas */
-img {
-    max-width: 100%;
-    height: auto;
-}
+/* Media Queries para responsive */
 @media (max-width: 768px) {
-  .nav-panafer ul {
-      flex-direction: column;
-  }
-  .header-content {
-      flex-direction: column;
-  }
+    .nav-panafer ul {
+        flex-direction: column;
+    }
+    .header-content {
+        flex-direction: column;
+    }
+    .nosotros2 {
+        flex-direction: column; /* Apila imagen y texto */
+        align-items: center; /* Centra verticalmente */
+        text-align: center;
+    }
+    .nosotros-imagen {
+        margin: 0 0 20px 0;
+        max-width: 100%;
+    }
+    .nosotros-texto h2 {
+        text-align: center;
+    }
+    .image-content {
+        bottom: 20px;
+        left: 10px;
+        right: 10px;
+        font-size: 0.8em;
+        transform: translateX(0);
+    }
+    .image-content h2 {
+        font-size: 1.2em;
+    }
 }
-
-
 
 /* ... (estilos del header) ... */
 
