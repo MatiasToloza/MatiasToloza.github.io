@@ -562,16 +562,18 @@ display: inline-block; /* Evita espacios entre las imágenes */
   .contacto-contenido {
     flex-direction: column;
   }
-
+  .contacto-izquierda h2,
+  .contacto-centro h2,
   .contacto-izquierda,
   .contacto-centro,
   .contacto-derecha {
-    flex: 1 1 100%;
+    flex: 1 1 100%; /* Distribución equitativa en pantallas grandes */
     margin-bottom: 20px;
   }
+  
 
   .mapa {
-    height: 300px;
+    height: 200px;
   }
 }
 .icono-flotante {
