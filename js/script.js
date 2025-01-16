@@ -1,3 +1,75 @@
+// Function for the slider
+function funcionEjecutar(side) {
+    let parentTarget = document.getElementById('slider');
+    if (!parentTarget) return; // Exit if slider doesn't exist
+
+    let elements = parentTarget.getElementsByTagName('li');
+    if (elements.length === 0) return; // Exit if no slides
+
+    let curElement, siguienteElement;
+
+    for (let i = 0; i < elements.length; i++) {
+        if (elements[i].style.opacity === '1') {
+            curElement = i;
+            break;
+        }
+    }
+
+    if (side === 'anterior' || side === 'siguiente') {
+        if (side === 'anterior') {
+            siguienteElement = (curElement === 0) ? elements.length - 1 : curElement - 1;
+        } else {
+            siguienteElement = (curElement === elements.length - 1) ? 0 : curElement + 1;
+        }
+    } else {
+        siguienteElement = side;
+    }
+
+    let elementSel = document.getElementsByClassName("listslider")[0]?.getElementsByTagName("a"); // Use optional chaining to prevent errors
+    if (elementSel) {
+        elementSel[curElement]?.classList.remove("item-select-slid"); // Use optional chaining to prevent errors
+        elementSel[siguienteElement]?.classList.add("item-select-slid"); // Use optional chaining to prevent errors
+    }
+
+
+    elements[curElement].style.opacity = 0;
+    elements[curElement].style.zIndex = 0;
+    elements[siguienteElement].style.opacity = 1;
+    elements[siguienteElement].style.zIndex = 1;
+}
+
+// Automatic slider
+if (document.querySelector('#slider')) {
+    setInterval(function () { // Correct way to use setInterval
+        funcionEjecutar('siguiente');
+    }, 5000);
+}
+
+// List slider functionality
+if (document.querySelector('.listslider')) {
+    let link = document.querySelectorAll(".listslider li a");
+    link.forEach(function (link) {
+        link.addEventListener('click', function (e) {
+            e.preventDefault();
+            let item = this.getAttribute('itlist');
+            let arrItem = item.split("_");
+            funcionEjecutar(parseInt(arrItem[1], 10)); // Parse the string to an integer
+        });
+    });
+}
+
+// Smooth scrolling functionality (separate from the slider)
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+
+// Category Buttons
 const botonesCategoria = document.querySelectorAll('.categoria-btn');
 const contenedoresProductos = document.querySelectorAll('.productos-container');
 
@@ -15,38 +87,5 @@ botonesCategoria.forEach(boton => {
         } else {
             console.error("No se encontró el contenedor con ID:", categoria);
         }
-    });
-});
-// ... (código para el filtrado de categorías - SIN CAMBIOS)
-
-const form = document.getElementById('mi-formulario');
-
-form.addEventListener('submit', (event) => {
-    event.preventDefault();
-
-    const nombre = document.getElementById('nombre').value;
-    const email = document.getElementById('email').value;
-    const mensaje = document.getElementById('mensaje').value;
-
-    fetch('http://localhost:3000/enviar-email', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ nombre, email, mensaje })
-    })
-    .then(response => {
-        if (!response.ok) {
-            return response.text().then(text => {throw new Error(`${response.status} ${response.statusText}: ${text}`)})
-        }
-        return response.text();
-    })
-    .then(data => {
-        alert(data);
-        form.reset();
-    })
-    .catch(error => {
-        console.error('Error:', error);
-        alert('Hubo un error al enviar el mensaje. Inténtalo de nuevo más tarde.');
     });
 });

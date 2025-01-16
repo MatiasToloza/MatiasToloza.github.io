@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
   <header class="header-panafer">
     <div class="header-content">
       <a href="#" class="logo-panafer">
@@ -16,28 +17,59 @@
       </a>
       <nav class="nav-panafer">
         <ul>
-          <li><a href="#">Inicio</a></li>
-          <li><a href="#">Nosotros</a></li>
-          <li><a href="#">Productos</a></li>
-          <li><a href="#">Contactanos</a></li>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#nosotros">Nosotros</a></li>
+          <li><a href="#productos">Productos</a></li>
+          <li><a href="#contactanos">Contactanos</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <section class="image-container">
-    <img src="https://www.bakelschile.cl/wp-content/uploads/sites/25/2022/11/IMG_7694.jpg" alt="Pan de Pascua">
-    <div class="image-content">
-      <h2>Prepárate para una dulce Navidad</h2>
-      <p>Pan de pascua 850 gr y 500 gr sabores: tradicional, nueces almendras & nueces dulce de leche</p>
-    </div>
+  <section id="inicio">
+
+    <a href="javascript: funcionEjecutar('anterior');" class="arrowPrev"><i class="fas fa-chevron-circle-left"></i></a>
+    <a href="javascript: funcionEjecutar('siguiente');" class="arrowNext"><i class="fas fa-chevron-circle-right"></i></a>
+    <ul class="listslider">
+      <li><a itlist="itList_0" href="#" class="item-select-slid"></a></li>
+      <li><a itlist="itList_1" href="#"></a></li>
+      <li><a itlist="itList_2" href="#"></a></li>
+    </ul>
+    <ul id="slider">
+      <li style="background-image: url('https://i.pinimg.com/736x/f2/b6/32/f2b632a1616398b9d3b00a520cc65d65.jpg'); z-index:0; opacity: 1;">
+        <div class="content_slider">
+          <div>
+            <h2>Imagen 1</h2>
+            <p>Escribe el texto que aparecerá sobre la imagen número 1.</p>
+          </div>
+        </div>
+      </li>
+      <li style="background-image: url('https://i.pinimg.com/736x/f2/b6/32/f2b632a1616398b9d3b00a520cc65d65.jpg'); z-index:0; opacity: 1;">
+        <div class="content_slider">
+          <div>
+            <h2>Imagen2</h2>
+            <p>Escribe el texto que aparecerá sobre la imagen número 1.</p>
+          </div>
+        </div>
+      </li>
+      <li style="background-image: url('https://i.pinimg.com/736x/f2/b6/32/f2b632a1616398b9d3b00a520cc65d65.jpg'); ">
+        <div class="content_slider">
+          <div>
+            <h2>Imagen 3</h2>
+            <p>Escribe el texto que aparecerá sobre la imagen número 3</p>
+          </div>
+        </div>
+      </li>
+    </ul>
   </section>
 
-  <section class="nosotros">
-    <div class="nosotros2">
-      <div class="nosotros-imagen">
-        <img src="https://static.vecteezy.com/system/resources/previews/008/389/093/non_2x/homemade-bread-on-a-traditional-craftsman-market-vertical-image-photo.jpg" alt="Imagen de nosotros">
-      </div>
+  <section id="nosotros">
+    <section class="nosotros">
+      <div class="nosotros2">
+        <div class="nosotros-imagen">
+          <img src="https://static.vecteezy.com/system/resources/previews/008/389/093/non_2x/homemade-bread-on-a-traditional-craftsman-market-vertical-image-photo.jpg" alt="Imagen de nosotros">
+        </div>
+        
       <div class="nosotros-texto">
         <h2>Nosotros</h2>
         <p>[Nombre de la Panadería], horneamos sueños desde [Año de fundación]. Lo que comenzó como una pequeña panadería familiar, impulsada por la pasión de [Nombre del fundador/a] p[...]</p>
@@ -49,12 +81,13 @@
         </head>
     <body>
 
-
-        <section class="catalogotitulo">Catálogo</section>
-    
+      <section id="productos">  
+        <section class="productos">
+          <div class="textoproducto">
+            <h2>Productos</h2>
         <nav>
             <button class="categoria-btn active" data-categoria="pasteleria">Pastelería</button>
-            <button class="categoria-btn" data-categoria="masa2">Masa...</button>
+            <button class="categoria-btn" data-categoria="masa2">Masa sdjkfhsk</button>
             <button class="categoria-btn" data-categoria="masadulce">Masa dulce</button>
             <button class="categoria-btn" data-categoria="ppascua">Pan de pascua</button>
             <button class="categoria-btn" data-categoria="galletas">Galletas</button>
@@ -145,48 +178,43 @@
         <script src="js/script.js"></script>
     </body>
     </html>
+    <a href="https://wa.me/+56937093979" class="icono-flotante" target="_blank" rel="noopener noreferrer">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/512px-WhatsApp.svg.png" alt="Contactanos">
+      </a>
+    </body>
+    </html>
 
+      <section id="contactanos">  
     <section class="contacto">
         <div class="contacto-contenido">
-            <div class="contacto-izquierda">
-                <div class="ayuda-pedido">
-                    <h2>¿Necesitas ayuda para realizar tu pedido?</h2>
-                    <p>Escríbenos a WhatsApp y te ayudaremos a realizar tu compra.</p>
-                    <div class="contacto-info">
-                        <div class="contacto-item">
-                            <img src="icono-whatsapp.png" alt="WhatsApp"> <p>WhatsApp<br>630 95 18 55</p>
-                        </div>
-                        <div class="contacto-item">
-                            <img src="icono-ubicacion.png" alt="Ubicación">
-                            <p>¿Dónde estamos?<br>C/ Horno, nº 1, 23379 Segura de la Sierra, Jaén</p>
-                        </div>
-                        <div class="contacto-item">
-                            <img src="icono-email.png" alt="Email">
-                            <p>Email:<br>panciencia.panaderia@gmail.com</p>
-                        </div>
-                    </div>
-                    <div class="redes-sociales">
-                        <a href="#"><img src="icono-facebook.png" alt="Facebook"></a>
-                        <a href="#"><img src="icono-instagram.png" alt="Instagram"></a>
-                    </div>
+          <div class="contacto-izquierda">
+            <h2>Información de Contacto</h2>
+            <div class="contacto-info">
+                <div class="contacto-item">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/512px-WhatsApp.svg.png" alt="WhatsApp"> <span>asdasd</span>
+                </div>
+                <div class="contacto-item">
+                    <img src="https://cdn-icons-png.flaticon.com/512/484/484167.png" alt="Dirección"> <span>DIRECCION 191231, REG</span>
+                </div>
+                <div class="contacto-item">
+                    <img src="https://cdn-icons-png.flaticon.com/512/54/54290.png" alt="Email"> <span>PASDASDADSAS@GMAIL.COM</span>
                 </div>
             </div>
-            <div class="contacto-centro">
-                <h2>Envíanos un email</h2>
-                <form id="mi-formulario">
-                    <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
-                    <input type="email" id="email" name="email" placeholder="Email" required>
-                    <textarea id="mensaje" name="mensaje" placeholder="Mensaje"></textarea>
-                    <button type="submit">Enviar</button>
-                </form>
-            </main>
-        
-            <script src="js/script.js"></script>
-        </body>
-        </html>
-            <div class="contacto-derecha">
-                <div class="mapa">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d700.4622889838147!2d-70.6511531814978!3d-33.37161555001822!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662c7004582ad79%3A0xf07d1f9d954a4aaf!2sPanafer!5e0!3m2!1ses-419!2scl!4v1736824429674!5m2!1ses-419!2scl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>                </div>
+            <div class="redes-sociales">
+                <h2>Redes sociales</h2>
+                 <a href="https://wa.me/+56937093979" target="_blank" rel="noopener noreferrer">
+                    <img src="img/ICONOFLOTANTE.png" alt="Instagram">
+                </a>
+                <a href="https://www.instagram.com/panaferspa/" target="_blank" rel="noopener noreferrer">
+                    <img src="https://1000marcas.net/wp-content/uploads/2019/11/Instagram-Logosu.png" alt="Instagram">
+                </a>
             </div>
+          
+          <div class="contacto-derecha">
+            <div class="mapa">
+                <h2>Ubicacion</h2>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3331.9827224446894!2d-70.6513094!3d-33.371517100000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662c7004582ad79%3A0xf07d1f9d954a4aaf!2sPanafer!5e0!3m2!1ses-419!2scl!4v1737034727121!5m2!1ses-419!2scl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+          </div>
         </div>
-    </section>
+      </section>
