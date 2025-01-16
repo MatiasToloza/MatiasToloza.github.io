@@ -574,6 +574,7 @@ display: inline-block; /* Evita espacios entre las imágenes */
 
   .mapa {
     height: 200px;
+    margin-right:20px
   }
 }
 .icono-flotante {
