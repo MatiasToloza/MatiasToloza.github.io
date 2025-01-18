@@ -240,7 +240,7 @@ body {
 .item-select-slid {
   background: #FFF  !important;
 }
-@media screen and (max-width: 460px){
+@media screen and (max-width: 375px){
   .content_slider h2 {
       font-size: 15pt !important;
   }
@@ -257,8 +257,38 @@ body {
       right: 15px !important;
   }
   #slider{
-      height: 400px;
-      min-height: 400px;
+      height: 700px;
+      width: 450px;
+      min-height: 600px;
+  }
+  #slider li .content_slider{
+      padding: 5px 20px;
+  }
+  .btnSlider{
+      padding: 10px 30px;
+      font-size: 10pt;
+  }
+}
+@media screen and (max-width: 425px){
+  .content_slider h2 {
+      font-size: 15pt !important;
+  }
+  .content_slider p {
+      font-size: 12pt !important;
+  }
+  #container-slider .arrowPrev, #container-slider .arrowNext{
+      font-size: 20pt;
+  }
+  #container-slider .arrowPrev{
+      left: 15px;
+  }
+  #container-slider .arrowNext{
+      right: 15px !important;
+  }
+  #slider{
+      height: 800px;
+      width: 500px;
+      min-height: 600px;
   }
   #slider li .content_slider{
       padding: 5px 20px;
@@ -546,7 +576,7 @@ display: inline-block; /* Evita espacios entre las imágenes */
 
 
 .mapa {
-  height: 450px;
+  height: 600px;
   overflow: hidden;
   border-radius: 15px;
 }
@@ -558,7 +588,7 @@ display: inline-block; /* Evita espacios entre las imágenes */
 }
 
 /* Media Queries para responsividad */
-@media (max-width: 768px) {
+@media (max-width: 425px) {
   .contacto-contenido {
     flex-direction: column;
   }
@@ -569,12 +599,53 @@ display: inline-block; /* Evita espacios entre las imágenes */
   .contacto-derecha {
     flex: 1 1 100%; /* Distribución equitativa en pantallas grandes */
     margin-bottom: 20px;
+    margin-right: 20px;
+    font-size: 25px;
+    padding: 0px;
+  }
+    .contacto-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+      font-size: 15px;
+    }
+    
   }
   
 
   .mapa {
-    height: 200px;
-    margin-right:20px
+    height: 600px;
+    margin-right: 20px;
+  }
+
+/* Media Queries para responsividad */
+@media (max-width: 375px) {
+  .contacto-contenido {
+    flex-direction: column;
+  }
+  .contacto-izquierda h2,
+  .contacto-centro h2,
+  .contacto-izquierda,
+  .contacto-centro,
+  .contacto-derecha {
+    flex: 100%; /* Distribución equitativa en pantallas grandes */
+    margin-bottom: 20px;
+    margin-right: 40px;
+    padding: 0px
+    
+
+  }
+  .contacto-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 15px;
+  }
+  
+
+  .mapa {
+    height: 600px;
+    margin-right: 20px;
   }
 }
 .icono-flotante {
